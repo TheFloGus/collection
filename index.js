@@ -63,4 +63,3 @@ collection.set("name4", "Nate");
 collection.set("name5", "John");
 collection.set("name6", "Eugene");
 collection.set("name7", "Jeane");
-console.log(collection.removeAt(4, 3));
