@@ -21,6 +21,15 @@ class IndexedMap {
   get(key){
     return this[key] ? this[key] : null;
   }
+
+  remove(key){
+    Object.keys(this).forEach(el => {
+      if(this[el].index > this[key].index)
+      this[el].index -= 1;
+    })
+    delete this[key]
+    return this
+  }
 }
 
 let collection = new IndexedMap();
@@ -28,4 +37,8 @@ collection.set("name", "Eugene");
 collection.set("name1", "Vika");
 collection.set("name2", "Masha");
 collection.set("name3", "Dima");
-console.log(collection.get('name0'));
+collection.set("name4", "Nate");
+collection.set("name5", "John");
+collection.set("name6", "Luke");
+collection.set("name7", "Jeane");
+console.log(collection.remove('name1'));
